@@ -1,0 +1,9 @@
+type Create @entity(immutable: true) {
+  id: Bytes!
+  owner: Bytes! # address
+  token: Bytes! # address
+  totalSupply: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

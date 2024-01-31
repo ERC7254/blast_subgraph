@@ -1,0 +1,26 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: factory
+    network: blast-testnet
+    source:
+      address: "0x7f47E53D7eEeB1eC1C5b9ec10db6F172d9e1Dbdd"
+      abi: factory
+      startBlock: 998543
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Create
+      abis:
+        - name: factory
+          file: ./abis/factory.json
+      eventHandlers:
+        - event: Create(address,address,uint256)
+          handler: handleCreate
+      file: ./src/factory.ts

@@ -1,0 +1,8 @@
+{
+  "blast-testnet": {
+    "factory": {
+      "address": "0x7f47E53D7eEeB1eC1C5b9ec10db6F172d9e1Dbdd",
+      "startBlock": 998543
+    }
+  }
+}
