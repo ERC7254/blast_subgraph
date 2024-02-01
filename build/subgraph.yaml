@@ -2,7 +2,7 @@ specVersion: 1.0.0
 indexerHints:
   prune: auto
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: factory
@@ -19,14 +19,14 @@ dataSources:
         - Create
       abis:
         - name: factory
-          file: ./abis/factory.json
+          file: factory\abis\factory.json
         - name: ERC20
-          file: ./abis/ERC20.json
+          file: factory\abis\ERC20.json
         - name: ERC20SymbolBytes
-          file: ./abis/ERC20SymbolBytes.json
+          file: factory\abis\ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: ./abis/ERC20NameBytes.json
+          file: factory\abis\ERC20NameBytes.json
       eventHandlers:
         - event: Create(address,address,uint256)
           handler: handleCreate
-      file: ./src/factory.ts
+      file: factory\factory.wasm
